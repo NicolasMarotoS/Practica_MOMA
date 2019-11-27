@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900&display=swap" rel="stylesheet">
+    <style type="text/css">
+        :root{
+            --blau: blue;
+            --roig: red;
+            --groc: yellow;
+            --gris: grey;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 900;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+/*            grid-gap: 20px;*/
+            grid-template-rows: repeat(4, 350px);
+        }
+        .expos{
+            overflow: hidden;
+        }
+        expos img{
+            object-fit: cover;
+            object-position: center center;
+            height: 100%;
+        }
+        img{
+            width: 100%;
+        }
+        .e1, .e4, .e5, .e8{
+            display: flex;
+            flex-direction: column;
+            grid-column: span 2;
+            padding: 2em 3em;
+        }
+        .e2, .e3, .e6, .e7{
+            grid-column: span 3;
+        }
+        .e1{
+            background: var(--blau)
+        }
+        .e4{
+            background: var(--groc)
+        }
+        .e5{
+            background: var(--roig)
+        }
+        .e8{
+            background: var(--gris)
+        }
+        h1{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="expos e1">
+            <h1>EXPOSICION DE ARTE URBANO</h1>
+            <h3>2 de Enero 2020</h3>
+        </div>
+        <div class="expos e2">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="expos e3">
+            <img src="img/2.jpg" alt="">
+        </div>
+        <div class="expos e4">
+            <h1>Tutankhamón. La tumba y sus tesoros</h1>
+            <h3>23 de noviembrea 19 Diciembre 2020</h3>
+        </div>
+        <div class="expos e5">
+            <h1>Centro de Arte y Exposiciones de Ejea de los Caballeros</h1>
+            <h2>7 de mayo 10 de junio de 2020</h2>
+        </div>
+        <div class="expos e6">
+            <img src="img/3.jpg" alt="">
+        </div>
+        <div class="expos e7">
+            <img src="img/4.jpg" alt="">
+        </div>
+        <div class="expos e8">
+            <h1>El SPACIO</h1>
+            <h3>30 de agosto 30 de noviembre</h3>
+        </div>
+    </div>
+</body>
+</html>
